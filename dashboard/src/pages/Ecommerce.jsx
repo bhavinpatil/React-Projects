@@ -2,7 +2,7 @@ import React from 'react'
 import { BsCurrencyDollar } from 'react-icons/bs'
 import { GoPrimitiveDot } from 'react-icons/go'
 import { Stacked, Pie, Button, SparkLine } from '../components'
-import { earningData, SparkLineAreaData, ecomPieChartData } from '../data/dummy'
+import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'
 import { useStateContext } from '../contexts/ContextProvider'
 
 
@@ -14,9 +14,7 @@ const Ecommerce = () => {
         <div className='bg-white 
         dark:text-gray-200
         dark:bg-secondary-dark-bg h-44
-        rounded-xl w-full lg:w-80 p-8 pt-9 m-3
-        bg-hero-pattern bg-no-repeat bg-cover 
-        bg-center'>
+        rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
           <div className='flex justify-between items-center'>
             <div>
               <p className='font-bold text-gray-400'>Earnings</p>
@@ -102,10 +100,65 @@ const Ecommerce = () => {
               </p>
             </div>
           </div>
+          <div className='mt-10 flex gap-10 flex-wrap justify-center'>
+            <div className='border-r-1 border-color m-4 pr-10'>
+              <div>
+                <p>
+                  <span className='text-3xl font-semibold'>
+                    $93,438
+                  </span>
+                  <span className='p-1.5 
+                    hover:drop-shadow-xl 
+                    cursor-pointer 
+                    rounded-full 
+                   text-white 
+                   bg-green-400 
+                   ml-3 text-xs'>
+                    23%
+                  </span>
+                </p>
+                <p className='text-gray-500 mt-1'>
+                  Budget
+                </p>
+              </div>
+
+
+              <div className='mt-8'>
+                <p>
+                  <span className='text-3xl font-semibold'>
+                    $48,438
+                  </span>
+                </p>
+                <p className='text-gray-500 mt-1'>
+                  Expense
+                </p>
+              </div>
+              <div className='mt-5'>
+                <SparkLine
+                  currentColor="blue"
+                  id="line-sparkline"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color="blue"
+                />
+              </div>
+              <div className='mt-10 '>
+                <Button
+                color="white"
+                bgColor="blue"
+                text="Download Report"
+                borderRadius="10px"/>
+              </div>
+            </div>
+            <div>
+              <Stacked width="320px" 
+              height="360px"/>
+            </div>
+          </div>
         </div>
       </div>
-
-
     </div>
   )
 }
