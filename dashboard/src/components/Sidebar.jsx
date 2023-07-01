@@ -11,9 +11,9 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
 
-  const { activeMenu, setActiveMenu, screenSize} = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext();
   const handleClosedSideBar = () => {
-    if(activeMenu && screenSize <= 900){
+    if (activeMenu && screenSize <= 900) {
       setActiveMenu(false);
     }
   }
@@ -41,7 +41,7 @@ const Sidebar = () => {
             <button type='button'
               onClick={() => setActiveMenu(
                 (prevActiveMenu) =>
-                !prevActiveMenu)}
+                  !prevActiveMenu)}
               className='text-xl rounded-full 
             p-3 hover:bg-light-gray mt-4 block'
             >
@@ -56,9 +56,16 @@ const Sidebar = () => {
                 {item.title}
               </p>
               {item.links.map((link) => (
-                <NavLink to={`/${link.name}`}
+                <NavLink
+                  to={`/${link.name}`}
                   key={link.name}
                   onClick={handleClosedSideBar}
+                  
+                  style={({ isActive }) => ({
+                    backgroundColor: isActive ?
+                    currentColor : ''
+                  })}
+                  
                   className={({ isActive }) =>
                     isActive ? activeLink : normalLink}
                 >
@@ -71,8 +78,9 @@ const Sidebar = () => {
             </div>
           ))}
         </div>
-      </>)}
-    </div>
+      </>)
+      }
+    </div >
   )
 }
 
