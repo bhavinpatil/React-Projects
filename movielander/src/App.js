@@ -5,7 +5,7 @@ import './App.css';
 import { useState, useEffect } from "react";
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=248e05d1';
+const API_URL = 'https://www.omdbapi.com?apikey=248e05d1';
 
 
 const App = () => {
