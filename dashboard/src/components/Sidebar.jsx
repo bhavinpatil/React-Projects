@@ -34,7 +34,7 @@ const Sidebar = () => {
           tracking-tight dark:text-white 
           text-slate-900'
           >
-            <SiShopware /> <span>Shoppy</span>
+            <SiShopware /> <span>Shop Express</span>
           </Link>
           <TooltipComponent content='Menu'
             position='BottomCenter'>

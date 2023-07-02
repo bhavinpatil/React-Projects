@@ -6,7 +6,7 @@ import { Header } from '../components'
 
 const Customers = () => {
   return (
-    <div className='m-2 md:m-10 p-2 md:p-10 
+    <div className='m-2 md:m-10 p-2 md:p-10 mt-20
     bg-white rounded-3xl'>
       <Header category="Page" title="Customers" />
       <GridComponent

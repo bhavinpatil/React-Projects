@@ -1,4 +1,3 @@
-import { notifications } from '@syncfusion/ej2';
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
@@ -48,7 +47,7 @@ export const ContextProvider = ({ children }) => {
                 currentColor, setColor,
                 currentMode, setMode, 
                 themeSettings, setThemeSettings,
-                handleClick,
+                handleClick, initialState
 
             }}
         >
