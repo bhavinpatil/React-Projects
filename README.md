@@ -4,12 +4,22 @@ This repository contains a React project built from scratch, providing a compreh
 
 ## Table of Contents
 
+- [Projects](#projects)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Projects
+
+1. To-Do-Application - https://to-do-black.netlify.app/
+   
+2. MovieLander - https://movielander.netlify.app/
+   - (Will not show any results as this was loaded over HTTPS, but requested an insecure resource 'http://www.omdbapi.com/?apikey=248e05d1&s=Spiderman')
+    
+3. Dashboard - https://syncfusion-dash.netlify.app/
 
 ## Getting Started
 
